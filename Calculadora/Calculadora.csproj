@@ -8,4 +8,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Audios\igualAudio.mpeg" />
+    <None Remove="Audios\limparAudio.mpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Audios\igualAudio.mpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audios\limparAudio.mpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

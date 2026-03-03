@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media;
 
 namespace Calculadora
 {
@@ -16,6 +17,7 @@ namespace Calculadora
     /// </summary>
     public partial class MainWindow : Window
     {
+        MediaPlayer player = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
@@ -39,11 +41,6 @@ namespace Calculadora
             txtDisplay.Text = "";
         }
 
-        private void Button_Click_MC(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -51,26 +48,36 @@ namespace Calculadora
 
         private void Igual_Click(object sender, RoutedEventArgs e)
         {
-            double numero2 = Convert.ToDouble(txtDisplay.Text);
+            TocarSom("igualAudio.mpeg");
+
             double resultado = 0;
 
-            switch (operacao)
+            if (operacao == "√")
             {
-                case "+":
-                    resultado = numero1 + numero2;
-                    break;
+                resultado = Math.Sqrt(numero1);
+            }
+            else
+            {
+                double numero2 = Convert.ToDouble(txtDisplay.Text);
 
-                case "-":
-                    resultado = numero1 - numero2;
-                    break;
-
-                case "×":
-                    resultado = numero1 * numero2;
-                    break;
-
-                case "÷":
-                    resultado = numero1 / numero2;
-                    break;
+                switch (operacao)
+                {
+                    case "%":
+                        resultado = numero1 % numero2;
+                        break;
+                    case "+":
+                        resultado = numero1 + numero2;
+                        break;
+                    case "-":
+                        resultado = numero1 - numero2;
+                        break;
+                    case "×":
+                        resultado = numero1 * numero2;
+                        break;
+                    case "÷":
+                        resultado = numero1 / numero2;
+                        break;
+                }
             }
 
             txtDisplay.Text = resultado.ToString();
@@ -78,7 +85,21 @@ namespace Calculadora
 
         private void Limpar_Click(object sender, RoutedEventArgs e)
         {
+            TocarSom("limparAudio.mpeg");
             txtDisplay.Text = "";
+        }
+
+        private void TocarSom(string nomeArquivo)
+        {
+            MediaPlayer novoPlayer = new MediaPlayer();
+
+            string caminho = System.IO.Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Audios",
+                nomeArquivo);
+
+            novoPlayer.Open(new Uri(caminho, UriKind.Absolute));
+            novoPlayer.Play();
         }
     }
 }

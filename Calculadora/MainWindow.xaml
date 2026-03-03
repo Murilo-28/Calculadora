@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculadora"
         mc:Ignorable="d"
-        Title="MainWindow" Height="536" Width="489">
+        Title="MainWindow" Height="536" Width="489" MinHeight="560" MinWidth="489" MaxWidth="489" MaxHeight="560">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="#8B2E2E" Offset="0"/>
@@ -19,21 +19,20 @@
         <TextBlock HorizontalAlignment="Left" Margin="259,-20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFCC1F1F" FontSize="100" Height="122"><Run Language="pt-br" Text="."/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="384,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="85" Foreground="#FF4C4C4C"><Run Language="pt-br" Text="="/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="62,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFCC1F1F" FontSize="150" Height="173"><Run Language="pt-br" Text="."/></TextBlock>
-        <Button Content="7" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Center" Height="65" Width="66" Click="Numero_Click" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="180,0,0,0" VerticalAlignment="Center" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="246,0,0,0" VerticalAlignment="Center" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="114,229,0,0" VerticalAlignment="Top" Height="65" Width="66" Click="Numero_Click" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="180,229,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="246,229,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
         <Button Content="4" HorizontalAlignment="Left" Margin="114,293,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
         <Button Content="5" HorizontalAlignment="Left" Margin="180,293,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
         <Button Content="6" HorizontalAlignment="Left" Margin="246,293,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="114,358,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="180,358,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="246,358,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="114,423,0,0" VerticalAlignment="Top" Height="65" Width="132" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
-        <Button Content="=" HorizontalAlignment="Left" Margin="246,423,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Igual_Click"/>
-        <Button Content="+" HorizontalAlignment="Left" Margin="346,293,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="346,358,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
-        <Button Content="÷" HorizontalAlignment="Left" Margin="346,423,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
-        <Button Content="MC" HorizontalAlignment="Left" Margin="346,0,0,0" VerticalAlignment="Center" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Button_Click_MC" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="114,357,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="180,357,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="246,357,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="114,421,0,0" VerticalAlignment="Top" Height="65" Width="132" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Numero_Click"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="246,421,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black" Click="Igual_Click"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="311,293,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="311,357,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
+        <Button Content="÷" HorizontalAlignment="Left" Margin="311,421,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
         <Button Background="#121212" Content="🗑️" Margin="30,267,401,199" Foreground="White" FontFamily="Global Monospace" FontSize="36" RenderTransformOrigin="0.561,0.513" Click="Limpar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -58,10 +57,37 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="6,-434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF4FA3A3" FontSize="450" Height="563"><Run Language="pt-br" Text="."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="6,-434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF35E4E4" FontSize="450" Height="563"><Run Language="pt-br" Text="."/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="182,-87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFCC1F1F" FontSize="100" Height="122"><Run Language="pt-br" Text="."/></TextBlock>
         <TextBlock HorizontalAlignment="Center" Margin="0,-87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFC7D200" FontSize="100" Height="122"><Run Language="pt-br" Text="."/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="281,-87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF157724" FontSize="100" Height="122"><Run Language="pt-br" Text="."/></TextBlock>
         <ComboBox HorizontalAlignment="Left" Margin="629,16,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="311,229,0,0" VerticalAlignment="Top" Height="65" Width="66" FontSize="36" FontFamily="Global Monospace" FontWeight="Bold" Click="Operador_Click" Foreground="White" Background="#FF4FA3A3" BorderBrush="Black"/>
+        <Button Background="#FFD6A725" Content="√" Margin="417,304,14,162" Foreground="White" FontFamily="Global Monospace" FontSize="36" RenderTransformOrigin="0.561,0.513" Click="Operador_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="20" 
+                        BorderBrush="Black" 
+                        BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Background="#FFCC1F1F" Content="%" Margin="391,390,40,76" Foreground="White" FontFamily="Global Monospace" FontSize="36" RenderTransformOrigin="0.561,0.513" Click="Operador_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="20" 
+                        BorderBrush="Black" 
+                        BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
