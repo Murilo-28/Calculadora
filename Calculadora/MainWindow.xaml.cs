@@ -35,9 +35,27 @@ namespace Calculadora
         private void Operador_Click(object sender, RoutedEventArgs e)
         {
             Button botao = sender as Button;
+            operacao = botao.Content.ToString();
+
+            if (operacao == "√")
+            {
+                if (double.TryParse(txtDisplay.Text, out double numero))
+                {
+                    if (numero >= 0)
+                    {
+                        double resultado = Math.Sqrt(numero);
+                        txtDisplay.Text = resultado.ToString();
+                        TocarSom("igualAudio.mpeg");
+                    }
+                    else
+                    {
+                        txtDisplay.Text = "Erro";
+                    }
+                }
+                return;
+            }
 
             numero1 = Convert.ToDouble(txtDisplay.Text);
-            operacao = botao.Content.ToString();
             txtDisplay.Text = "";
         }
 
@@ -58,24 +76,42 @@ namespace Calculadora
             }
             else
             {
-                double numero2 = Convert.ToDouble(txtDisplay.Text);
+                if (!double.TryParse(txtDisplay.Text, out double numero2))
+                {
+                    txtDisplay.Text = "Erro";
+                    return;
+                }
 
                 switch (operacao)
                 {
                     case "%":
                         resultado = numero1 % numero2;
                         break;
+
                     case "+":
                         resultado = numero1 + numero2;
                         break;
+
                     case "-":
                         resultado = numero1 - numero2;
                         break;
+
+                    case "x":
+                    case "X":
                     case "×":
+                    case "*":
                         resultado = numero1 * numero2;
                         break;
+
                     case "÷":
-                        resultado = numero1 / numero2;
+                    case "/":
+                        if (numero2 != 0)
+                            resultado = numero1 / numero2;
+                        else
+                        {
+                            txtDisplay.Text = "Erro";
+                            return;
+                        }
                         break;
                 }
             }
